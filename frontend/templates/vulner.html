@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>ARS using Microservices</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{ url_for('static', filename='vendor/aos/aos.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/remixicon/remixicon.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center justify-content-lg-between">
+
+      <h1 class="logo me-auto me-lg-0"><a href="{{ url_for('index') }}">ARS<span>.</span></a></h1>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="{{ url_for('index') }}">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <a href="#services" class="get-started-btn scrollto">Get Started</a>
+
+    </div>
+  </header><!-- End Header -->
+
+
+  <main id="main">
+
+   <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+        <div class="container" data-aos="zoom-in">
+            <div class="text-center">
+                <h3>Services</h3>
+            </div>
+        </div>
+    </section>
+    
+    <!-- End Cta Section -->
+   
+    
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+        <div class="container" data-aos="fade-up">
+  
+          <div class="section-title">
+            <h1>Vulnerability Scanner</h1>
+            <h2>Check our Services</h2>
+          </div>
+  
+          <div class="row">
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+              <div class="icon-box">
+                <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                <h4><a href="">Click-jacking</a></h4>
+                <form action="/clickjack" method="post">
+                  <input type="text" name="user_input" placeholder="www.example.com" required>
+                  <button class="button button1">Submit</button>
+                </form>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+              <div class="icon-box">
+                <div class="icon"><i class="bx bx-file"></i></div>
+                <h4><a href="">SQL injection</a></h4>
+                <form action="/sql" method="post">
+                  <input type="text" name="user_input" placeholder="www.example.com" required>
+                  <button class="button button1">Submit</button>
+                </form>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+              <div class="icon-box">
+                <div class="icon"><i class="bx bx-tachometer"></i></div>
+                <h4><a href="">Nmap Scanner </a></h4>
+                <form action="/nmap_scan" method="post">
+                  <input type="text" name="user_input" placeholder="www.example.com" required>
+                  <button class="button button1">Submit</button>
+                </form>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
+              <div class="icon-box">
+                <div class="icon"><i class="bx bx-world"></i></div>
+                <h4><a href="">XSS-Scanner</a></h4>
+                <form action="/xss" method="post">
+                  <input type="text" name="user_input" placeholder="www.example.com" required>
+                  <button class="button button1">Submit</button>
+                </form>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
+              <div class="icon-box">
+                <div class="icon"><i class="bx bx-slideshow"></i></div>
+                <h4><a href="">HostHeader</a></h4>
+                <form action="/hostheader" method="post">
+                  <input type="text" name="user_input" placeholder="www.example.com" required>
+                  <button class="button button1">Submit</button>
+                </form>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
+              <div class="icon-box">
+                <div class="icon"><i class="bx bx-arch"></i></div>
+                <h4><a href="">Scan for Hidden Domains</a></h4>
+                <form action="/ipdomain" method="post">
+                  <input type="text" name="user_input" placeholder="www.example.com" required>
+                  <button class="button button1">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+      </section><!-- End Services Section --> 
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-info">
+              <h3>ARS<span>.</span></h3>
+              <p>
+                SUNBEAM HINJAWADI PUNE <br>
+                Authorized Training Centre of C-DAC ACTS <br>
+                <strong>Phone:</strong> +91 8282829805 / +91 8282829806<br>
+                <strong>Email:</strong> siit@sunbeaminfo.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-10 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="/index.html">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Information Gathering</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Vulnerability Scanner</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>ARS</span></strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{{ url_for('static', filename='vendor/purecounter/purecounter_vanilla.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/aos/aos.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/glightbox/js/glightbox.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/php-email-form/validate.js') }}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+    volumes:
+      - pdf_files:/app/pdf_files
+    image: utkarshkadu/myfrontend
+
+  iplocator:
+    build:
+      context: ./iplocator
+      dockerfile: Dockerfile
+    ports:
+      - 6001:6001
+    image: utkarshkadu/myiplocator
+    
+  phone_scan:
+    build:
+      context: ./phone_scan
+      dockerfile: Dockerfile
+    ports:
+      - 6002:6002
+    image: utkarshkadu/phone_scan
+
+  pdfanalysis:
+    build:
+      context: ./pdfanalysis
+      dockerfile: Dockerfile
+    ports:
+      - 6003:6003
+    volumes:
+      - pdf_files:/app/pdf_files
+    image: utkarshkadu/pdfanalysis
+    
+  email_scrape:
+    build:
+      context: ./email_scrapper
+      dockerfile: Dockerfile
+    ports:
+      - 6004:6004
+    image: utkarshkadu/email_scrapper
+    
+  links_scrape:
+    build:
+      context: ./links_scanner
+      dockerfile: Dockerfile
+    ports:
+      - 6005:6005
+    image: utkarshkadu/links_scrapper
+
+  number_inform:
+    build:
+      context: ./number_info
+      dockerfile: Dockerfile
+    ports:
+      - 6006:6006
+    image: utkarshkadu/number_inform
+
+  subdomain_scan:
+    build:
+      context: ./subdomain_scanner
+      dockerfile: Dockerfile
+    ports:
+      - 6007:6007
+    image: utkarshkadu/subdomain_scanner
+      
+  clickjacking:
+    build:
+      context: ./click_jacking
+      dockerfile: Dockerfile
+    ports:
+      - 6008:6008
+    image: utkarshkadu/clickjacking
+
+  sql_injection:
+    build:
+      context: ./sql_injection
+      dockerfile: Dockerfile
+    ports:
+      - 6009:6009
+    image: utkarshkadu/sql_injection
+
+  nmap_scan:
+    build:
+      context: ./nmap
+      dockerfile: Dockerfile
+    ports:
+      - 6010:6010
+    image: utkarshkadu/nmap_scan
+
+  xss_scan:
+    build:
+      context: ./xss_scanner
+      dockerfile: Dockerfile
+    ports:
+      - 6011:6011
+    image: utkarshkadu/xss_scanner
+
+  hostheader:
+    build:
+      context: ./hostheader
+      dockerfile: Dockerfile
+    ports:
+      - 6012:6012
+    image: utkarshkadu/hostheader
+
+  ipdomain:
+    build:
+      context: ./domain_sameIP
+      dockerfile: Dockerfile
+    ports:
+      - 6013:6013
+    image: utkarshkadu/ipdomain
+
+volumes:
+  pdf_files:
